@@ -1,0 +1,26 @@
+{
+  "name": "C++ Development",
+  "image": "mcr.microsoft.com/devcontainers/cpp:ubuntu",
+  "features": {
+    "ghcr.io/devcontainers/features/common-utils:2": {
+      "installZsh": true,
+      "username": "vscode",
+      "upgradePackages": true
+    }
+  },
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "ms-vscode.cpptools",
+        "ms-vscode.cmake-tools",
+        "llvm-vs-code-extensions.vscode-clangd"
+      ],
+      "settings": {
+        "C_Cpp.default.compilerPath": "/usr/bin/g++",
+        "cmake.configureOnOpen": true
+      }
+    }
+  },
+  "postCreateCommand": "apt-get update && apt-get install -y cmake g++ git",
+  "remoteUser": "vscode"
+}
