@@ -49,5 +49,3 @@ TEST(NPCTest, SaveToStream) {
     EXPECT_FALSE(output.empty());
     EXPECT_NE(output.find("Smaug"), std::string::npos);
 }
-
-// Отдельная строка для EOF

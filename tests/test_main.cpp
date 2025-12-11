@@ -92,7 +92,6 @@ TEST(NPCDeath, DieOnce) {
     
     EXPECT_FALSE(dragon->isAlive());
     
-    // Повторная атака на мертвого
     dragon->accept(visitor);
     EXPECT_FALSE(dragon->isAlive());
 }
